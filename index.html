@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perfil | Clubefy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="perfil-container">
+    <div class="perfil-header">
+      <img id="fotoPerfil" src="default.png" alt="Foto de perfil" onclick="abrirModalFoto()" />
+      <h2 id="nomeUsuario">Usuário</h2>
+      <p id="bioUsuario">Sua bio aqui...</p>
+      <button onclick="abrirModalEditar()">Editar Perfil</button>
+    </div>
+
+    <div class="estatisticas">
+      <div><strong>Posts</strong><span>20</span></div>
+      <div><strong>Seguidores</strong><span>120</span></div>
+      <div><strong>Seguindo</strong><span>150</span></div>
+    </div>
+  </div>
+
+  <!-- Modal Editar -->
+  <div id="modalEditar" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal('modalEditar')">&times;</span>
+      <input type="text" id="inputNome" placeholder="Nome de usuário" />
+      <textarea id="inputBio" placeholder="Bio..."></textarea>
+      <button onclick="salvarPerfil()">Salvar</button>
+    </div>
+  </div>
+
+  <!-- Modal Foto -->
+  <div id="modalFoto" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal('modalFoto')">&times;</span>
+      <input type="file" id="inputFoto" accept="image/*" />
+      <button onclick="trocarFoto()">Salvar Foto</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
